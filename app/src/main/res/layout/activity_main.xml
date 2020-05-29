@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070707"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:layout_width="404dp"
+        android:layout_height="593dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/byname_button"
+        android:layout_width="264dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="33dp"
+        android:background="#DF2A68"
+        android:onClick="onClickName"
+        android:text="Calculate by Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F3EDED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/bycoordinates_button"
+        android:layout_width="264dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="#1B751F"
+        android:onClick="onClickCoordinates"
+        android:text="Calculate by Coordinates"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F3EBEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byname_button" />
+
+    <Button
+        android:id="@+id/alerts_button"
+        android:layout_width="264dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="#673AB7"
+        android:onClick="onClickAlerts"
+        android:text="Get Alerts"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FBF6F6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bycoordinates_button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="157dp"
+        android:contentDescription="title"
+        android:fontFamily="monospace"
+        android:text="Sun Elevation Calculator"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F4EDED"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sun Elevation Calculator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
