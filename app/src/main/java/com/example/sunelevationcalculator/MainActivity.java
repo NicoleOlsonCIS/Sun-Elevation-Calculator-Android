@@ -1,5 +1,11 @@
+
+//
+// CURRENT BUGS:
+// Need to re-code Thread Runnable so that it can stop, getting warning about it not "closing"
+//
+//
+
 package com.example.sunelevationcalculator;
-//package com.androdocs.currentlocation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,36 +13,19 @@ import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.os.AsyncTask;
-
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.room.ColumnInfo;
-import androidx.room.Dao;
-import androidx.room.Database;
-import androidx.room.Delete;
-import androidx.room.Entity;
-import androidx.room.Insert;
-import androidx.room.PrimaryKey;
-import androidx.room.Query;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
-import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -64,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
     String userCountry = "";
     Boolean userSaved = false;
 
-    TextView latTextView, lonTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         getLastLocation();
 
     }
-    
+
     private boolean checkPermissions() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
