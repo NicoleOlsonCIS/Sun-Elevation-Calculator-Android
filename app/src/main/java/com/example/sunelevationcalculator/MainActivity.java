@@ -2,7 +2,7 @@
 //
 // CURRENT BUGS:
 // Need to re-code Thread Runnable so that it can stop, getting warning about it not "closing"
-//
+// Wait for user response to location request before creating Database object? (bug on first use of app after clearing data)
 //
 
 package com.example.sunelevationcalculator;
@@ -38,9 +38,6 @@ import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-
-
-
 
 public class MainActivity extends AppCompatActivity {
 

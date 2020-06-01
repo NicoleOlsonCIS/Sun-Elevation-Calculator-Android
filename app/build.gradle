@@ -30,6 +30,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
+    implementation 'com.android.volley:volley:1.1.0' // for calling api
+    //implementation 'com.mcxiaoke.volley:library:1.0.19'
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
